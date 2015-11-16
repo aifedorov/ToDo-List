@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112E38FF1BFA2DE00077BA9D /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E38FE1BFA2DE00077BA9D /* MainTableViewController.m */; };
 		11BE3A4F1BF4EBDA0063B544 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BE3A4E1BF4EBDA0063B544 /* main.m */; };
 		11BE3A521BF4EBDA0063B544 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BE3A511BF4EBDA0063B544 /* AppDelegate.m */; };
 		11BE3A551BF4EBDA0063B544 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BE3A541BF4EBDA0063B544 /* DetailViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		112E38FD1BFA2DE00077BA9D /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		112E38FE1BFA2DE00077BA9D /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		11BE3A4A1BF4EBDA0063B544 /* ToDo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11BE3A4E1BF4EBDA0063B544 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		11BE3A501BF4EBDA0063B544 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				11BE3A5B1BF4EBDA0063B544 /* LaunchScreen.storyboard */,
 				11BE3A5E1BF4EBDA0063B544 /* Info.plist */,
 				11BE3A4D1BF4EBDA0063B544 /* Supporting Files */,
+				112E38FD1BFA2DE00077BA9D /* MainTableViewController.h */,
+				112E38FE1BFA2DE00077BA9D /* MainTableViewController.m */,
 			);
 			path = "ToDo List";
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112E38FF1BFA2DE00077BA9D /* MainTableViewController.m in Sources */,
 				11BE3A551BF4EBDA0063B544 /* DetailViewController.m in Sources */,
 				11BE3A521BF4EBDA0063B544 /* AppDelegate.m in Sources */,
 				11BE3A4F1BF4EBDA0063B544 /* main.m in Sources */,
