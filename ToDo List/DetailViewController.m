@@ -34,7 +34,6 @@
     
     self.eventDate = self.datePicker.date;
     
-    NSLog(@"date Picker %@", self.eventDate);
 }
 
 - (void) handleEndEditing {

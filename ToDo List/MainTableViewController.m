@@ -1,11 +1,3 @@
-//
-//  MainTableViewController.m
-//  ToDo List
-//
-//  Created by Александр on 16.11.15.
-//  Copyright © 2015 Александр. All rights reserved.
-//
-
 #import "MainTableViewController.h"
 
 @interface MainTableViewController ()
@@ -28,7 +20,10 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     
-    self.arrayEvents = [[NSMutableArray alloc] initWithObjects:@"AAA", @"BBB", @"CCC", nil];
+    
+    NSArray * array = [[UIApplication sharedApplication] scheduledLocalNotifications];
+    self.arrayEvents = [[NSMutableArray alloc] initWithArray:array];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +35,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     return self.arrayEvents.count;
 }
 
@@ -48,10 +44,14 @@
     NSString * identifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    NSString * string = [self.arrayEvents objectAtIndex:indexPath.row];
+    UILocalNotification * notification = [self.arrayEvents objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = string;
     
+    NSDictionary * dict = notification.userInfo;
+    
+    cell.textLabel.text = [dict objectForKey:@"eventInfo"];
+    cell.detailTextLabel.text = [dict objectForKey:@"eventDate"];
+        
     return cell;
 }
 
