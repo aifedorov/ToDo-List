@@ -47,7 +47,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     UILocalNotification * notification = [self.arrayEvents objectAtIndex:indexPath.row];
     
-    
     NSDictionary * dict = notification.userInfo;
     
     cell.textLabel.text = [dict objectForKey:@"eventInfo"];
@@ -59,7 +58,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UILocalNotification * notification = [self.arrayEvents objectAtIndex:indexPath.row];
+    
+    
+    NSDictionary * dict = notification.userInfo;
+    
     DetailViewController * detailView  = [self.storyboard instantiateViewControllerWithIdentifier:@"detailView"];
+    
+    detailView.eventInfo = [dict objectForKey:@"eventInfo"];
+    detailView.eventDate = notification.fireDate;
+    detailView.isDetail = YES;
     
     [self.navigationController pushViewController:detailView animated:YES];
 }
