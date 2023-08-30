@@ -1,2 +1,2 @@
 # ToDo-List
-My first application of the iOS.
+My first iOS application.
